@@ -88,7 +88,7 @@
                     <span class="text-dark">a</span>
                     <span class="text-info fw-bolder">i</span>
                     <span class="text-dark">n :</span>
-                    <span class="text-info text fw-bold" id="Domain">https://api-toys.cyclic.app</span>
+                    <span class="text-info text fw-bold" id="Domain">https://lucky-frog-top-coat.cyclic.app</span>
                     <button class="btn mx-2 copyBtn" id="domainbtn"><i class="bi bi-files"></i></button>
                 </h4>
 
@@ -119,13 +119,13 @@
                         <td>/users</td>
                         <td>
                             <pre>
-                                name:michal,
+                                "name":"michal",
                                 "email": "michal@gmail.com",
                                 "password": "michal"
                             </pre>
                         </td>
                         <td>Add a new user to the data base ,<a class="text-decoration-none"
-                                href="https://github.com/MaorgD/ToysProject/blob/main/api/validation/userValidation.js">if
+                                href="https://github.com/michal80996/ToysProjectRoutes/blob/93bfe9a383be764e5b527567cfd047b86199a837/models/userModel.js">if
                                 you want to see the template of valid user.</a></td>
                     </tr>
                     <tr>
@@ -139,7 +139,7 @@
                         </td>
                         <td>User login, if the email and password are correct the server will respond with a token,<br>
                             <a class="text-decoration-none"
-                                href="https://github.com/MaorgD/ToysProject/blob/main/api/validation/userValidation.js">if
+                                href="https://github.com/michal80996/ToysProjectRoutes/blob/93bfe9a383be764e5b527567cfd047b86199a837/models/userModel.js">if
                                 you want to see the template of valid user.</a>
                         </td>
                     </tr>
@@ -156,7 +156,7 @@
                         <td>/users/{idEdit}</td>
                         <td>
                             <pre>
-                                name:michal,
+                                "name":"michal",
                                 "email": "michal@gmail.com",
                                 "password": "michal"
                             </pre>
@@ -214,7 +214,7 @@
                     <span class="text-dark">a</span>
                     <span class="text-info fw-bolder">i</span>
                     <span class="text-dark">n :</span>
-                    <span class="text-info text fw-bold" id="Domain">https://api-toys.cyclic.app</span>
+                    <span class="text-info text fw-bold" id="Domain">https://lucky-frog-top-coat.cyclic.app</span>
                     <button class="btn mx-2 copyBtn" id="domainbtn2"><i class="bi bi-files"></i></button>
                 </h4>
                 <thead class="table-dark">
@@ -228,13 +228,13 @@
                 <tbody>
                     <tr>
                         <td>GET</td>
-                        <td><a href="https://api-toys.cyclic.app//toys">/toys</a></td>
+                        <td><a href="https://lucky-frog-top-coat.cyclic.app">/toys</a></td>
                         <td class="text-center">none</td>
                         <td>Get a list of all the toys, will present 10 results per page.</td>
                     </tr>
                     <tr>
                         <td>GET</td>
-                        <td><a href="https://api-toys.cyclic.app/toys/toysList/:name">/toys/toysList/Bratz</a></td>
+                        <td><a href="https://lucky-frog-top-coat.cyclic.app/toys/toysList/:name">/toys/toysList/Bratz</a></td>
                         <td class="text-center">none</td>
                         <td>search for a toy by searching follwing name or info , it will present 10
                             results per page.
@@ -243,14 +243,14 @@
                     <tr>
                         <td>GET</td>
                         <td><a
-                                href="https://api-toys.cyclic.app/toys/toysList/search?min=50&max=200">/toys/toysList/search?min=50&max=200</a>
+                                href="https://lucky-frog-top-coat.cyclic.app/toys/toysList/search?min=50&max=200">/toys/toysList/search?min=50&max=200</a>
                         </td>
                         <td class="text-center">none</td>
                         <td>Get a list of the toys by min & max , it will present 10 results per page.</td>
                     </tr>
                     <tr>
                         <td>GET</td>
-                        <td><a href="https://api-toys.cyclic.app/toys/category/doll">/toys/category/:catName</a></td>
+                        <td><a href="https://lucky-frog-top-coat.cyclic.app/toys/category/doll">/toys/category/:catName</a></td>
                         <td class="text-center">none</td>
                         <td>Get a list of all the toys in toys <strong>category</strong>, it will present 10 results per
                             page.</td>
@@ -260,21 +260,18 @@
                         <td>/toys</td>
                         <td>
                             <pre>
-
-{
-"name":"Fish Game Doll",
-"info":"Fish,Doll",
-"category":"Doll",
-"img_url":"Fish.jpg" ,
-"price":25
-}
-                                
-                              
-   </pre>
+                                {
+                                "name":"Fish Game Doll",
+                                "info":"Fish,Doll",
+                                "category":"Doll",
+                                "img_url":"Fish.jpg" ,
+                                "price":25
+                                }
+                            </pre>
                         </td>
                         <td>Add a new toy to the data base, <strong>You need a token for this query ,</strong><br>
                             <a class="text-decoration-none"
-                            href="https://github.com/MaorgD/ToysProject/blob/main/api/validation/toyValidation.js">if
+                            href="https://github.com/michal80996/ToysProjectRoutes/blob/93bfe9a383be764e5b527567cfd047b86199a837/models/toyModel.js">if
                             you want to see the template of valid toy</a>
                         </td>
                     </tr>
@@ -283,14 +280,14 @@
                         <td>/toys/ID </td>
                         <td>
                             <pre>
-{
-"name":"Fish Game Doll",
-"info":"Fish,Doll",
-"category":"Doll",
-"img":"Fish.jpg" ,
-"price":25
-}
-   </pre>
+                                {
+                                "name":"Fish Game Doll",
+                                "info":"Fish,Doll",
+                                "category":"Doll",
+                                "img_url":"Fish.jpg" ,
+                                "price":25
+                                }
+                            </pre>
                         </td>
                         <td>Update a toy in the data base,<strong>You need a token for this query.</strong></td>
                     </tr>
@@ -323,7 +320,7 @@
                 </a></li>
             <li class="ms-3"><a class="text-muted" href="https://www.linkedin.com/"><i class="bi bi-linkedin"></i>
                 </a></li>
-            <li class="ms-3"><a class="text-muted" href="https://github.com/MaorgD/ToysProject "><i
+            <li class="ms-3"><a class="text-muted" href="https://github.com/michal80996/ToysProjectRoutes"><i
                         class="bi bi-github"></i>
                 </a></li>
         </ul>
