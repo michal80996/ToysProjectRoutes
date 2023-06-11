@@ -75,6 +75,24 @@ router.get("/toysList/search", async (req, res) => {
 
 })
 
+router.get("/toysList/searchByCat", async (req, res) => {
+  let perPage = req.query.perPage || 10;
+  let page = req.query.page || 1;
+  try {
+    let queryS = req.query.s;
+    let searchReg = new RegExp(queryS, "i")
+    let data = await ToyModel.find({ $or: [{ name: searchReg }, { info: searchReg }] })
+      .limit(perPage)
+      .skip((page - 1) * perPage)
+      .sort({ _id: -1 })
+    res.json(data);
+  }
+  catch (err) {
+    console.log(err);
+    res.status(500).json({ msg: "there error try again later", err })
+  }
+})
+
 router.get("/toysList/:name", async (req, res) => {
   try {
     let name = req.params.name;
@@ -108,7 +126,7 @@ router.post("/", auth, async (req, res) => {
 })
 
 
-router.put("/:idEdit", auth, async (req, res) => {
+router.put("toysList/:idEdit", auth, async (req, res) => {
   let valdiateBody = validateToys(req.body);
   if (valdiateBody.error) {
     return res.status(400).json(valdiateBody.error.details)
@@ -133,7 +151,7 @@ router.put("/:idEdit", auth, async (req, res) => {
 })
 
 
-router.delete("/:idDel", auth, async (req, res) => {
+router.delete("toysList/:idDel", auth, async (req, res) => {
   try {
     let idDel = req.params.idDel;
     let data;

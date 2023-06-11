@@ -228,7 +228,7 @@
                 <tbody>
                     <tr>
                         <td>GET</td>
-                        <td><a href="https://lucky-frog-top-coat.cyclic.app/toys">/toys</a></td>
+                        <td><a href="https://lucky-frog-top-coat.cyclic.app/toys/toysList">/toys</a></td>
                         <td class="text-center">none</td>
                         <td>Get a list of all the toys, will present 10 results per page.</td>
                     </tr>
@@ -250,14 +250,14 @@
                     </tr>
                     <tr>
                         <td>GET</td>
-                        <td><a href="https://lucky-frog-top-coat.cyclic.app/toys/category/doll">/toys/category/doll</a></td>
+                        <td><a href="https://lucky-frog-top-coat.cyclic.app/toys/toysList/doll">/toys/toysList/doll</a></td>
                         <td class="text-center">none</td>
                         <td>Get a list of all the toys in toys <strong>category</strong>, it will present 10 results per
                             page.</td>
                     </tr>
                     <tr>
                         <td>POST</td>
-                        <td>/toys</td>
+                        <td>/toys/toysList</td>
                         <td>
                             <pre>
                                 {
@@ -293,7 +293,7 @@
                     </tr>
                     <tr>
                         <td>DELETE</td>
-                        <td>/toys/ID</td>
+                        <td>/toys/toysList/ID</td>
                         <td class="text-center">none</td>
                         <td>Delete a toy from the data base, <strong>You need a token for this query.</strong></td>
                     </tr>
