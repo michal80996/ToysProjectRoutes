@@ -95,8 +95,11 @@ router.get("/toysList/searchByCat", async (req, res) => {
 router.get("/toysList/:name", async (req, res) => {
   try {
     let name = req.params.name;
+    
     if (name) {
-      let data = await ToysModel.find({ name })
+      let searchReg = new RegExp(name, "i")
+      let data = await ToyModel.find({ $or: [{ name: searchReg }, { info: searchReg }] })
+      // let data = await ToysModel.find({ name })
       res.json(data);
     }
   }
