@@ -84,7 +84,6 @@ router.get("/toysList/searchByCat", async (req, res) => {
     let data = await ToyModel.find({ $or: [{ name: searchReg }, { info: searchReg }] })
       .limit(perPage)
       .skip((page - 1) * perPage)
-      .sort({ _id: -1 })
     res.json(data);
   }
   catch (err) {
